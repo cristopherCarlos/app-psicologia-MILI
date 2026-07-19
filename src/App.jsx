@@ -6,8 +6,9 @@ import Modal from './components/Modal';
 import EmotionWheel from './components/EmotionWheel';
 
 const REFLECTION_THEMES_BY_EMOTION = {
-  agobio: {
+ agobio: {
     title: 'Agobio',
+    color: '#B1D4E5',
     description: 'Es la sensación de estar desbordado cuando la cantidad de exigencias académicas (tareas, plazos, responsabilidades) supera lo que sientes que puedes manejar en el momento, generando una sensación de "no darte a abasto".',
     themes: {
       entregas_cruzadas: {
@@ -17,7 +18,46 @@ const REFLECTION_THEMES_BY_EMOTION = {
           <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
             <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
           </svg>
-        )
+        ),
+        activities: [
+          {
+            title: 'Matriz de prioridades 4x4',
+            time: '5 min',
+            tool: 'Hoja / Plantilla de la app',
+            objective: 'Organización y reducción del caos',
+            steps: [
+              'Abre una hoja o usa la plantilla dentro de la app y dibuja un cuadro dividido en 4 secciones: muy importante, importante, poco importante, nada importante.',
+              'Escribe cada pendiente en un post-it o línea dentro del cuadrante que le corresponda.',
+              'Empieza por el cuadrante muy importante: elige solo una tarea de ahí para comenzar de inmediato.',
+              'Revisa el cuadrante nada importante: si algo puede eliminarse o posponerse sin consecuencia, táchalo.'
+            ]
+          },
+          {
+            title: 'Regla de los 2 minutos',
+            time: '2 min',
+            tool: 'Temporizador',
+            objective: 'Liberar carga mental inmediata',
+            steps: [
+              'Mira tu lista de pendientes y busca tareas que sepas que toman menos de 2 minutos (responder un correo corto, subir un archivo, enviar un mensaje).',
+              'Pon un temporizador de 2 minutos.',
+              'Hazla de inmediato, sin pasarla a la lista de "pendientes importantes".',
+              'Repite con la siguiente tarea corta que encuentres, hasta un máximo de 3 tareas seguidas para no perder el foco en lo grande.'
+            ]
+          },
+          {
+            title: 'Respiración 4-7-8',
+            time: '3 min',
+            tool: 'Ninguna',
+            objective: 'Bajar la activación fisiológica',
+            steps: [
+              'Siéntate con la espalda recta y los pies apoyados en el piso.',
+              'Inhala por la nariz contando mentalmente hasta 4.',
+              'Sostén el aire contando hasta 7.',
+              'Exhala lentamente por la boca contando hasta 8.',
+              'Repite el ciclo 4 veces antes de comenzar a organizar tus entregas.'
+            ]
+          }
+        ]
       },
       estudios_responsabilidades: {
         title: 'Estudios y otras responsabilidades',
@@ -26,7 +66,46 @@ const REFLECTION_THEMES_BY_EMOTION = {
           <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
-        )
+        ),
+        activities: [
+          {
+            title: 'Time blocking simple',
+            time: '10 min',
+            tool: 'Calendario (papel o digital)',
+            objective: 'Planificación visual equilibrada',
+            steps: [
+              'Toma tu calendario del día (papel o digital).',
+              'Anota tus responsabilidades fijas primero (clases, trabajo, comidas).',
+              'Asigna bloques de 45-60 minutos a cada actividad pendiente, dejando al menos un bloque de descanso entre tareas distintas.',
+              'Escribe solo UNA tarea por bloque; si algo no cabe hoy, muévelo directamente a mañana en vez de amontonarlo.'
+            ]
+          },
+          {
+            title: 'Pomodoro adaptado 25/5',
+            time: '30 min',
+            tool: 'Temporizador',
+            objective: 'Evitar la sensación de desborde',
+            steps: [
+              'Elige una sola tarea para este ciclo.',
+              'Pon un temporizador de 25 minutos y trabaja solo en esa tarea, sin revisar el celular.',
+              'Cuando suene la alarma, detente aunque no hayas terminado.',
+              'Descansa 5 minutos completos: levántate, estira o toma agua (evita el celular en este descanso).',
+              'Repite el ciclo si necesitas continuar.'
+            ]
+          },
+          {
+            title: 'Journaling de descarga',
+            time: '5-7 min',
+            tool: 'Hoja o libreta de notas',
+            objective: 'Ganar perspectiva mental',
+            steps: [
+              'Consigue una hoja o abre una nota en blanco.',
+              'Escribe todo lo que ronda tu cabeza sin filtrar ni ordenar: pendientes, preocupaciones, ideas sueltas.',
+              'No te detengas a corregir ni organizar, solo saca todo durante el tiempo que dure el ejercicio.',
+              'Al terminar, subraya 1 o 2 cosas que realmente requieran acción hoy; el resto puede quedar solo como descarga mental.'
+            ]
+          }
+        ]
       },
       retomar_imprevisto: {
         title: 'Retomar tras un imprevisto',
@@ -35,12 +114,51 @@ const REFLECTION_THEMES_BY_EMOTION = {
           <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
             <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.27 15C20.25 18.25 17 21 12 21" />
           </svg>
-        )
+        ),
+        activities: [
+          {
+            title: 'Próximo paso mínimo',
+            time: '2 min',
+            tool: 'Ninguna',
+            objective: 'Retomar el ritmo sin abrumarse',
+            steps: [
+              "Detente un momento y pregúntate: '¿cuál es la acción más pequeña que puedo hacer ahora mismo?'",
+              'Escríbela en una sola línea, evitando pensar en todo lo que falta.',
+              'Hazla de inmediato, sin planificar el resto del día todavía.',
+              'Una vez hecha, decide si sigues con otro paso pequeño o haces una pausa.'
+            ]
+          },
+          {
+            title: 'Recalendarización del día',
+            time: '8 min',
+            tool: 'Calendario (Vista diaria)',
+            objective: 'Evitar sobrecarga de planificación',
+            steps: [
+              'Abre solo la vista de HOY en tu calendario (no la semana completa).',
+              'Marca qué actividades planificadas ya no son posibles por el imprevisto.',
+              'Reordena únicamente las tareas de hoy, moviendo lo que no alcance a mañana.',
+              'Deja como máximo 3 prioridades para el resto del día.'
+            ]
+          },
+          {
+            title: 'Frase de autocompasión',
+            time: '1 min',
+            tool: 'Ninguna',
+            objective: 'Reducir la tensión y reencuadrar',
+            steps: [
+              'Haz una pausa y respira profundo una vez.',
+              "Repite en voz alta o mentalmente: 'los imprevistos son parte del proceso, puedo ajustarme'.",
+              'Nota si tu cuerpo baja un poco la tensión al decirlo.',
+              'Continúa con tu próximo paso mínimo.'
+            ]
+          }
+        ]
       }
     }
   },
   ansiedad: {
     title: 'Ansiedad',
+    color: '#FCB995',
     description: 'Es la preocupación que sientes por no saber si podrás cumplir con tus propias expectativas. Aparece sobre todo antes de exámenes y está ligada a la duda sobre su propia capacidad.',
     themes: {
       semana_examenes: {
@@ -74,6 +192,7 @@ const REFLECTION_THEMES_BY_EMOTION = {
   },
   frustracion: {
     title: 'Frustración',
+    color: '#C0F0BD',
     description: 'Es lo que sientes cuando algo te impide avanzar (mucha carga de tareas, poco tiempo) y percibes que ya no tienes control sobre la situación.',
     themes: {
       sobrecarga_tareas: {
@@ -107,6 +226,7 @@ const REFLECTION_THEMES_BY_EMOTION = {
   },
   miedo_fracaso: {
     title: 'Miedo al fracaso',
+    color: '#DA9FEE',
     description: 'Es la preocupación constante que sientes por fallar, ya sea decepcionando a otras personas o a ti mismo. Brindas demasiada importancia al resultado final.',
     themes: {
       curso_dificil: {
@@ -140,6 +260,7 @@ const REFLECTION_THEMES_BY_EMOTION = {
   },
   desesperanza: {
     title: 'Desesperanza',
+    color: '#FF9389',
     description: 'Es sentir que ya no hay nada que hacer porque la situación académica supera lo que puedes manejar. Te genera una sensación de impotencia o de rendirte.',
     themes: {
       repetir_curso: {
@@ -409,7 +530,10 @@ export default function App() {
   const [selectedTheme, setSelectedTheme] = useState('entregas_cruzadas');
   const [currentView, setCurrentView] = useState('inicio');
   const [unlockedFeatures, setUnlockedFeatures] = useState(false);
+
   const [todayMood, setTodayMood] = useState(null);
+  const [moodHistory, setMoodHistory] = useState([]);
+
   const [activeActivity, setActiveActivity] = useState(null);
   const [activeStep, setActiveStep] = useState(0);
 
@@ -418,6 +542,23 @@ export default function App() {
 
   // Estados para el formulario de sugerencias
   const [feedbackForm, setFeedbackForm] = useState({ name: '', career: '', message: '' });
+
+  // local
+  const STORAGE_KEY = "mindcampus-data";
+  const loadData = () => {
+    try {
+      const data = localStorage.getItem(STORAGE_KEY);
+      return data ? JSON.parse(data) : null;
+    } catch (error) {
+      console.error(error);
+      return null;
+    }
+  };
+
+  const saveData = (data) => {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  };
+
 
   const getThemeKey = (emotionName) => {
     if (!emotionName) return 'agobio';
@@ -428,6 +569,7 @@ export default function App() {
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.replace('#', '') || 'inicio';
+
       if ((hash === 'actividades' || hash === 'registro') && !unlockedFeatures) {
         window.location.hash = 'inicio';
         setCurrentView('inicio');
@@ -435,10 +577,43 @@ export default function App() {
         setCurrentView(hash);
       }
     };
+
     window.addEventListener('hashchange', handleHashChange);
     handleHashChange();
-    return () => window.removeEventListener('hashchange', handleHashChange);
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
   }, [unlockedFeatures]);
+
+  useEffect(() => {
+    const data = loadData();
+
+    if (!data) return;
+
+    setTodayMood(data.todayMood || null);
+    setMoodHistory(data.moodHistory || []);
+    setUnlockedFeatures(data.unlockedFeatures || false);
+    setSelectedEmotion(data.selectedEmotion || null);
+    setSelectedTheme(data.selectedTheme || "entregas_cruzadas");
+  }, []);
+
+  useEffect(() => {
+    saveData({
+      todayMood,
+      moodHistory,
+      unlockedFeatures,
+      selectedEmotion,
+      selectedTheme
+    });
+  }, [
+    todayMood,
+    moodHistory,
+    unlockedFeatures,
+    selectedEmotion,
+    selectedTheme
+  ]);
+
 
   const openModal = () => {
     setModalStep('welcome');
@@ -494,18 +669,143 @@ export default function App() {
   const activeThemeData = themesToDisplay[selectedTheme] || Object.values(themesToDisplay)[0];
   const currentActivitiesData = ACTIVITIES_BY_EMOTION[currentEmotionKey] || ACTIVITIES_BY_EMOTION['agobio'];
 
+  const moodToY = {
+    Exc: 40,
+    Bin: 75,
+    Reg: 110,
+    Mal: 145,
+    Cri: 180,
+  };
+
+  const dayFormatter = new Intl.DateTimeFormat("es-PE", {
+    weekday: "short",
+  });
+
+  const visibleHistory = [...moodHistory]
+    .sort((a, b) => new Date(a.date) - new Date(b.date))
+    .slice(-7);
+
+  const points = visibleHistory
+    .map((item, index) => `${55 + index * 60},${moodToY[item.mood]}`)
+    .join(" ");
+
+
+
   return (
     <div className="min-h-screen bg-[#f3f3f3] text-neutral-800 font-sans p-4 md:p-8 flex flex-col justify-between antialiased">
 
       {/* Header */}
       <header className="w-full max-w-7xl mx-auto bg-white border-2 border-black px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-4 mb-8 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
         <div className="flex items-center gap-2 font-bold tracking-wider text-lg uppercase select-none">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" className="w-7 h-8 text-black" fill="none">
-            <g stroke="currentColor" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M 20 90 L 40 90" />
-              <path d="M 40 85 L 40 50 L 55 35" />
-              <path d="M 45 20 L 45 40 L 67 25 L 67 60 M 62 65 L 75 65 L 90 85" />
-              <path d="M 52 58 L 52 90" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 500 500"
+            className="w-9 h-10 text-black"
+            fill="none"
+          >
+            {/* LADO IZQUIERDO: CEREBRO */}
+            <g stroke="currentColor" strokeWidth="12" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M 230,90 C 180,90 140,120 140,170 C 100,180 90,230 100,270 C 90,320 120,370 160,390 C 160,420 200,450 240,430" />
+              <path d="M 230,140 C 190,140 180,180 200,200" />
+              <path d="M 150,220 C 150,180 190,180 210,210" />
+              <path d="M 180,250 C 140,260 160,310 200,300" />
+              <path d="M 230,260 C 200,260 190,290 220,320" />
+              <path d="M 155,330 C 135,360 185,410 210,370" />
+              <path d="M 215,350 C 195,380 230,410 235,370" />
+
+              {/* Eje central */}
+              <path d="M 245,110 L 245,150" strokeWidth="10" />
+              <path d="M 245,210 L 245,240" strokeWidth="10" />
+              <path d="M 245,300 L 245,340" strokeWidth="10" />
+            </g>
+
+            {/* LADO DERECHO: ENJAMBRE DE MARIPOSAS */}
+            <g fill="currentColor">
+              {/* 1. Mariposas Grandes */}
+              <g transform="translate(260, 350) rotate(-10) scale(1.4)">
+                <path d="M18,22 Q15,10 10,5 M19,22 Q22,10 27,5" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                <ellipse cx="18.5" cy="25" rx="2" ry="7" />
+                <path d="M17,23 C10,15 -5,10 2,30 C6,42 14,35 17,27" />
+                <path d="M17,27 C10,32 2,38 8,46 C14,52 18,40 17,31" />
+                <path d="M20,23 C27,15 42,10 35,30 C31,42 23,35 20,27" />
+                <path d="M20,27 C27,32 35,38 29,46 C23,52 19,40 20,31" />
+              </g>
+
+              <g transform="translate(320, 240) rotate(15) scale(1.1)">
+                <path d="M18,22 Q14,11 8,7 M19,22 Q23,11 29,7" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                <ellipse cx="18.5" cy="25" rx="1.8" ry="6" />
+                <path d="M17,23 C11,16 -3,11 3,29 C7,40 14,34 17,26 M17,26 C11,31 4,37 9,44 C14,50 18,39 17,30" />
+                <path d="M20,23 C26,16 40,11 34,29 C30,40 23,34 20,26 M20,26 C26,31 33,37 28,44 C23,50 19,39 20,30" />
+              </g>
+
+              <g transform="translate(370, 260) rotate(-5) scale(1.05)">
+                <ellipse cx="18.5" cy="25" rx="1.7" ry="5.5" />
+                <path d="M17,23 C11,16 -3,11 3,29 C7,40 14,34 17,26 M17,26 C11,31 4,37 9,44 C14,50 18,39 17,30" />
+                <path d="M20,23 C26,16 40,11 34,29 C30,40 23,34 20,26 M20,26 C26,31 33,37 28,44 C23,50 19,39 20,30" />
+              </g>
+
+              <g transform="translate(340, 130) rotate(-25) scale(0.95)">
+                <path d="M18,22 Q14,11 8,7 M19,22 Q23,11 29,7" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+                <ellipse cx="18.5" cy="25" rx="1.5" ry="5" />
+                <path d="M17,23 C11,15 -4,9 2,28 C6,39 14,33 17,25 M17,25 C11,30 3,36 8,43 C13,49 17,38 17,29" />
+                <path d="M20,23 C26,15 41,9 35,28 C31,39 23,33 20,25 M20,25 C26,30 34,36 29,43 C24,49 20,38 20,29" />
+              </g>
+
+              {/* 2. Mariposas Medianas */}
+              <g transform="translate(410, 195) rotate(35) scale(0.8)">
+                <ellipse cx="18.5" cy="25" rx="1.5" ry="5" />
+                <path d="M17,23 C11,15 -4,9 2,28 C6,39 14,33 17,25 M17,25 C11,30 3,36 8,43 C13,49 17,38 17,29" />
+                <path d="M20,23 C26,15 41,9 35,28 C31,39 23,33 20,25 M20,25 C26,30 34,36 29,43 C24,49 20,38 20,29" />
+              </g>
+
+              <g transform="translate(295, 120) rotate(-15) scale(0.75)">
+                <ellipse cx="18.5" cy="25" rx="1.3" ry="4.5" />
+                <path d="M17,23 C11,15 -4,9 2,28 C6,39 14,33 17,25 M17,25 C11,30 3,36 8,43" />
+                <path d="M20,23 C26,15 41,9 35,28 C31,39 23,33 20,25 M20,25 C26,30 34,36 29,43" />
+              </g>
+
+              <g transform="translate(275, 260) rotate(-45) scale(0.75)">
+                <path d="M17,23 C11,15 -4,9 2,28 C6,39 14,33 17,25 M20,23 C26,15 41,9 35,28 C31,39 23,33 20,25" />
+              </g>
+
+              {/* 3. Siluetas de Transición */}
+              <g transform="translate(285, 190) rotate(-40) scale(0.68)">
+                <path d="M17,23 C10,14 -5,8 2,28 C6,38 14,32 17,24 C20,32 28,38 32,28 C39,8 24,14 17,23 Z" />
+              </g>
+              <g transform="translate(345, 195) rotate(10) scale(0.65)">
+                <path d="M17,23 C10,14 -5,8 2,28 C6,38 14,32 17,24 C20,32 28,38 32,28 C39,8 24,14 17,23 Z" />
+              </g>
+              <g transform="translate(320, 70) rotate(-15) scale(0.55)">
+                <path d="M17,23 C10,14 -5,8 2,28 C6,38 14,32 17,24 C20,32 28,38 32,28 C39,8 24,14 17,23 Z" />
+              </g>
+              <g transform="translate(435, 145) rotate(20) scale(0.52)">
+                <path d="M17,23 C10,14 -5,8 2,28 C6,38 14,32 17,24 C20,32 28,38 32,28 C39,8 24,14 17,23 Z" />
+              </g>
+              <g transform="translate(430, 245) rotate(45) scale(0.55)">
+                <path d="M17,23 C10,14 -5,8 2,28 C6,38 14,32 17,24 C20,32 28,38 32,28 C39,8 24,14 17,23 Z" />
+              </g>
+              <g transform="translate(390, 320) rotate(10) scale(0.6)">
+                <path d="M17,23 C10,14 -5,8 2,28 C6,38 14,32 17,24 C20,32 28,38 32,28 C39,8 24,14 17,23 Z" />
+              </g>
+              <g transform="translate(290, 325) rotate(-20) scale(0.5)">
+                <path d="M17,23 C10,14 -5,8 2,28 C6,38 14,32 17,24 C20,32 28,38 32,28 C39,8 24,14 17,23 Z" />
+              </g>
+              <g transform="translate(370, 45) rotate(-50) scale(0.42)">
+                <path d="M17,23 C10,14 -5,8 2,28 C6,38 14,32 17,24 C20,32 28,38 32,28 C39,8 24,14 17,23 Z" />
+              </g>
+
+              {/* 4. Estela de Micro-partículas */}
+              <path d="M395,35 L401,31 L403,37 L399,39 Z" />
+              <path d="M420,55 L424,50 L428,54 L423,58 Z" />
+              <path d="M455,95 L462,92 L461,99 L454,98 Z" />
+              <path d="M465,120 L469,115 L472,121 L467,123 Z" />
+              <path d="M360,95 L364,91 L367,96 L362,98 Z" />
+              <path d="M395,115 L399,110 L402,116 L397,118 Z" />
+              <path d="M340,180 L345,176 L347,182 L341,184 Z" />
+              <path d="M380,165 L384,160 L387,166 L382,168 Z" />
+              <path d="M460,180 L465,176 L468,181 L462,183 Z" />
+              <path d="M450,225 L456,221 L458,227 L451,229 Z" />
+              <path d="M425,295 L429,290 L432,296 L427,298 Z" />
             </g>
           </svg>
           MINDCAMPUS
@@ -549,7 +849,16 @@ export default function App() {
               </div>
               <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {PLATFORM_FEATURES.map((feature) => (
-                  <FeatureCard key={feature.id} {...feature} />
+                  <div key={feature.id} className="p-6 border rounded-2xl flex flex-col gap-4">
+                    {/* Contenedor del ícono con el fondo de color redondo */}
+                    <div className={`w-12 h-12 rounded-full flex items-center justify-center ${feature.bgColor}`}>
+                      {feature.icon}
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-lg">{feature.title}</h3>
+                      <p className="text-sm text-neutral-600">{feature.desc}</p>
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -624,7 +933,31 @@ export default function App() {
                     return (
                       <button
                         key={mood.value}
-                        onClick={() => setTodayMood(mood.value)}
+                        onClick={() => {
+
+                          const today = new Date().toISOString().split("T")[0];
+
+                          let history = [...moodHistory];
+
+                          const index = history.findIndex(item => item.date === today);
+
+                          if (index >= 0) {
+
+                            history[index].mood = mood.value;
+
+                          } else {
+
+                            history.push({
+                              date: today,
+                              mood: mood.value
+                            });
+
+                          }
+
+                          setMoodHistory(history);
+                          setTodayMood(mood.value);
+
+                        }}
                         className={`flex flex-col items-center justify-center p-4 border-2 border-black rounded-2xl transition-all duration-150 ${isSelected ? 'bg-black text-white scale-[0.98]' : 'bg-white text-neutral-800 hover:bg-neutral-50 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]'
                           }`}
                       >
@@ -637,48 +970,108 @@ export default function App() {
               </div>
 
               <div className="lg:col-span-6 bg-white border-2 border-neutral-300 p-6 md:p-8 rounded-[2rem] space-y-6">
-                <div className="flex items-center gap-2 font-extrabold text-neutral-900 text-base">
-                  <svg className="w-5 h-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                  Historial semanal estimado
-                </div>
-                <div className="w-full overflow-x-auto pt-2">
-                  <svg viewBox="0 0 500 220" className="w-full min-w-[400px] h-auto overflow-visible">
-                    {[40, 75, 110, 145, 180].map((y, index) => (
-                      <line key={index} x1="45" y1={y} x2="475" y2={y} stroke="#e5e5e5" strokeWidth="1" />
-                    ))}
-                    <text x="15" y="44" className="text-[11px] font-bold fill-neutral-400">Exc</text>
-                    <text x="15" y="79" className="text-[11px] font-bold fill-neutral-400">Bin</text>
-                    <text x="15" y="114" className="text-[11px] font-bold fill-neutral-400">Reg</text>
-                    <text x="15" y="149" className="text-[11px] font-bold fill-neutral-400">Mal</text>
-                    <text x="15" y="184" className="text-[11px] font-bold fill-neutral-400">Cri</text>
 
-                    <polyline
-                      fill="none"
-                      stroke="#707070"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      points={`55,110 125,75 195,145 265,75 335,110 405,75 465,${todayMood === 'Exc' ? 40 : todayMood === 'Bin' ? 75 : todayMood === 'Mal' ? 145 : todayMood === 'Cri' ? 180 : 110}`}
-                    />
-                    <circle cx="55" cy="110" r="4" fill="#505050" />
-                    <circle cx="125" cy="75" r="4" fill="#505050" />
-                    <circle cx="195" cy="145" r="4" fill="#505050" />
-                    <circle cx="265" cy="75" r="4" fill="#505050" />
-                    <circle cx="335" cy="110" r="4" fill="#505050" />
-                    <circle cx="405" cy="75" r="4" fill="#505050" />
-                    <circle cx="465" cy={todayMood === 'Exc' ? 40 : todayMood === 'Bin' ? 75 : todayMood === 'Mal' ? 145 : todayMood === 'Cri' ? 180 : 110} r="5" fill="#000000" />
+                <div>
+                  <h3 className="text-lg font-extrabold text-neutral-900">
+                    Mi historial emocional
+                  </h3>
 
-                    <text x="55" y="205" textAnchor="middle" className="text-[10px] font-bold fill-neutral-400 uppercase">Lunes</text>
-                    <text x="125" y="205" textAnchor="middle" className="text-[10px] font-bold fill-neutral-400 uppercase">Martes</text>
-                    <text x="195" y="205" textAnchor="middle" className="text-[10px] font-bold fill-neutral-400 uppercase">Miercoles</text>
-                    <text x="265" y="205" textAnchor="middle" className="text-[10px] font-bold fill-neutral-400 uppercase">Jueves</text>
-                    <text x="335" y="205" textAnchor="middle" className="text-[10px] font-bold fill-neutral-400 uppercase">Viernes</text>
-                    <text x="405" y="205" textAnchor="middle" className="text-[10px] font-bold fill-neutral-400 uppercase">Sabado</text>
-                    <text x="465" y="205" textAnchor="middle" className="text-[10px] font-black fill-black uppercase">Hoy</text>
-                  </svg>
+                  <p className="text-xs text-neutral-400 font-medium">
+                    Tu progreso se construye con cada registro diario.
+                  </p>
                 </div>
+
+                {visibleHistory.length === 0 ? (
+
+                  <div className="flex flex-col items-center justify-center py-20 text-center">
+
+                    <div className="text-6xl mb-4">
+                      😊
+                    </div>
+
+                    <h4 className="font-bold text-neutral-800">
+                      Aún no tienes registros
+                    </h4>
+
+                    <p className="text-xs text-neutral-500 mt-2">
+                      Registra cómo te sientes hoy para comenzar tu historial.
+                    </p>
+
+                  </div>
+
+                ) : (
+
+                  <div className="w-full overflow-x-auto">
+
+                    <svg
+                      viewBox="0 0 500 220"
+                      className="w-full min-w-[400px] h-auto"
+                    >
+
+                      {[40, 75, 110, 145, 180].map((y, index) => (
+                        <line
+                          key={index}
+                          x1="45"
+                          y1={y}
+                          x2="475"
+                          y2={y}
+                          stroke="#e5e5e5"
+                          strokeWidth="1"
+                        />
+                      ))}
+
+                      <text x="15" y="44" className="text-[11px] font-bold fill-neutral-400">Exc</text>
+                      <text x="15" y="79" className="text-[11px] font-bold fill-neutral-400">Bin</text>
+                      <text x="15" y="114" className="text-[11px] font-bold fill-neutral-400">Reg</text>
+                      <text x="15" y="149" className="text-[11px] font-bold fill-neutral-400">Mal</text>
+                      <text x="15" y="184" className="text-[11px] font-bold fill-neutral-400">Cri</text>
+
+                      {visibleHistory.length > 1 && (
+                        <polyline
+                          fill="none"
+                          stroke="#000"
+                          strokeWidth="2.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          points={points}
+                        />
+                      )}
+
+                      {visibleHistory.map((item, index) => {
+
+                        const x = 55 + (index * 60);
+                        const y = moodToY[item.mood];
+
+                        return (
+                          <g key={item.date}>
+
+                            <circle
+                              cx={x}
+                              cy={y}
+                              r="5"
+                              fill="#000"
+                            />
+
+                            <text
+                              x={x}
+                              y="205"
+                              textAnchor="middle"
+                              className="text-[10px] font-bold fill-neutral-400 uppercase"
+                            >
+                              {dayFormatter.format(new Date(item.date))}
+                            </text>
+
+                          </g>
+                        )
+
+                      })}
+
+                    </svg>
+
+                  </div>
+
+                )}
+
               </div>
             </div>
           </div>
@@ -852,12 +1245,17 @@ export default function App() {
               <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-neutral-900 mb-1">Conversemos un momento</h2>
               <div className="flex items-center gap-2">
                 <span className="text-[10px] font-black uppercase tracking-widest text-neutral-400">Emoción seleccionada:</span>
-                <span className="px-3 py-1 bg-black text-white text-[10px] font-black uppercase rounded-full tracking-wider">
+                <span
+                  style={{ backgroundColor: REFLECTION_THEMES_BY_EMOTION[getThemeKey(selectedEmotion)]?.color }}
+                  className="px-3 py-1 text-black text-[10px] font-black uppercase rounded-full tracking-wider border border-black shadow-[1px_1px_0px_rgba(0,0,0,1)]"
+                >
                   {currentEmotionData.title}
                 </span>
               </div>
             </div>
+
             <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start w-full">
+              {/* COLUMNA IZQUIERDA: BOTONES DINÁMICOS */}
               <div className="md:col-span-6 space-y-4">
                 <p className="text-[11px] font-black tracking-widest text-neutral-400 uppercase">Temas de reflexión</p>
                 <div className="relative border border-neutral-300 p-4 rounded-sm bg-neutral-50/40">
@@ -867,14 +1265,26 @@ export default function App() {
                     {Object.keys(themesToDisplay).map((key) => {
                       const theme = themesToDisplay[key];
                       const isCurrent = selectedTheme === key;
+
+                      // Extraemos el color de la emoción activa
+                      const emotionColor = REFLECTION_THEMES_BY_EMOTION[getThemeKey(selectedEmotion)]?.color || '#ffffff';
+
                       return (
                         <button
                           key={key}
                           onClick={() => setSelectedTheme(key)}
-                          className={`w-full flex items-center gap-4 px-5 py-4 rounded-full border-2 border-black text-left font-bold transition-all duration-150 ${isCurrent ? 'bg-black text-white shadow-none translate-x-0.5 translate-y-0.5' : 'bg-white text-black hover:bg-neutral-50 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]'
+                          style={{
+                            backgroundColor: isCurrent ? '#000000' : emotionColor
+                          }}
+                          className={`w-full flex items-center gap-4 px-5 py-4 rounded-full border-2 border-black text-left font-bold transition-all duration-150 group ${isCurrent
+                              ? 'text-white shadow-none translate-x-0.5 translate-y-0.5'
+                              : 'text-black hover:brightness-95 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]'
                             }`}
                         >
-                          <div className={`p-2 rounded-full border ${isCurrent ? 'bg-neutral-900 border-neutral-700' : 'bg-black border-black'}`}>{theme.icon}</div>
+                          <div className={`p-2 rounded-full border transition-colors duration-150 ${isCurrent ? 'bg-neutral-900 border-neutral-700' : 'bg-white border-black'
+                            }`}>
+                            {theme.icon}
+                          </div>
                           <span className="text-xs md:text-sm uppercase tracking-wide">{theme.title}</span>
                         </button>
                       );
@@ -882,14 +1292,16 @@ export default function App() {
                   </div>
                 </div>
                 <div className="pt-2">
-                  <button onClick={() => setModalStep('wheel')} className="text-xs font-bold uppercase tracking-wider text-neutral-400 hover:text-black transition-colors">← Cambiar Emoción</button>
+                  <button onClick={() => setModalStep('wheel')} className="text-xs font-bold uppercase tracking-wider text-neutral-400 hover:text-black transition-colors focus:outline-none">← Cambiar Emoción</button>
                 </div>
               </div>
 
+              {/* COLUMNA DERECHA: BURBUJA DE CONVERSACIÓN */}
               <div className="md:col-span-6">
                 <div className="w-full min-h-[260px] bg-neutral-200/70 border-2 border-black rounded-[2.5rem] p-6 md:p-8 flex flex-col justify-between shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] relative">
                   <div className="bg-white border border-neutral-400 rounded-2xl p-4 text-xs md:text-sm font-medium text-neutral-700 leading-relaxed relative shadow-sm">
                     {activeThemeData.message}
+                    {/* Flecha corregida a fondo blanco para igualar su contenedor */}
                     <div className="absolute -bottom-2 left-6 w-3 h-3 bg-white border-b border-r border-neutral-400 transform rotate-45"></div>
                   </div>
                   <div className="mt-8 flex justify-end">
@@ -976,9 +1388,8 @@ export default function App() {
                     <button
                       key={i}
                       onClick={() => setActiveStep(i)}
-                      className={`h-1.5 rounded-full transition-all duration-300 ${
-                        i === activeStep ? 'w-6 bg-black' : i < activeStep ? 'w-3 bg-neutral-400' : 'w-3 bg-neutral-200'
-                      }`}
+                      className={`h-1.5 rounded-full transition-all duration-300 ${i === activeStep ? 'w-6 bg-black' : i < activeStep ? 'w-3 bg-neutral-400' : 'w-3 bg-neutral-200'
+                        }`}
                     />
                   ))}
                 </div>

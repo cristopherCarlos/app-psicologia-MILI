@@ -3,11 +3,11 @@ import React from 'react';
 export default function EmotionWheel({ onSelectEmotion, selectedEmotion }) {
   // Datos estables de las 5 emociones base, sus colores y textos
   const emotions = [
-    { name: 'Agobio', bg: '#ffedd5', border: '#fdba74', text: '#c2410c', angle: 0 },
-    { name: 'Ansiedad', bg: '#fef9c3', border: '#fde047', text: '#854d0e', angle: 72 },
-    { name: 'Frustración', bg: '#fee2e2', border: '#fca5a5', text: '#991b1b', angle: 144 },
-    { name: 'Miedo al fracaso', bg: '#f3e8ff', border: '#d8b4fe', text: '#6b21a8', angle: 216 },
-    { name: 'Desesperanza', bg: '#dbeafe', border: '#93c5fd', text: '#1e40af', angle: 288 },
+   { name: 'Agobio', bg: '#B1D4E5', border: '#7fb5cf', text: '#0f3c52', angle: 0 },
+    { name: 'Ansiedad', bg: '#FCB995', border: '#f7935c', text: '#5c2303', angle: 72 },
+    { name: 'Frustración', bg: '#C0F0BD', border: '#8cdb87', text: '#13400f', angle: 144 },
+    { name: 'Miedo al fracaso', bg: '#DA9FEE', border: '#be74db', text: '#431254', angle: 216 },
+    { name: 'Desesperanza', bg: '#FF9389', border: '#f26457', text: '#590f07', angle: 288 },
   ];
 
   // Configuración geométrica para gajos exactos de 72 grados en un SVG de 400x400
