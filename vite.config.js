@@ -1,8 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
 
+// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
-  base: '/app-psicologia-MILI/', // 👈 Agrega esta línea para GitHub Pages
+  plugins: [react()],
+  base: '/app-psicologia-MILI/', // <-- REVISA QUE ESTÉ EXACTAMENTE ASÍ
 })
